@@ -14,7 +14,7 @@
     <script src="node_modules/angular-animate/angular-animate.min.js"></script>
     <script src="node_modules/angular-aria/angular-aria.min.js"></script>
     <script src="node_modules/angular-messages/angular-messages.min.js"></script>
-    <script src="node_modules/angular-material/angular-material.min.js"></script>
+    <script src="node_modules/angular-material/angular-material.js"></script>
 
     <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.4.js"></script>
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
@@ -25,11 +25,11 @@
     <script src="js/app.CardController.js"></script>
 
 </head>
-<body ng-app="app">
+<body ng-app="app" layout="column" layout-padding>
 
-<div class="container" ng-controller="CreditCardChargeController as cardCtrl">
+<div class="container" ng-controller="CreditCardChargeController as cardCtrl" layout="column" layout-padding>
 
-    <!--<div ng-include src="'menu.html'"></div>-->
+    <div ng-include src="'menu.html'"></div>
     <section>
         <!--<md-toolbar class="md-primary md-default-theme">-->
         <!--<div class="md-toolbar-tools">-->

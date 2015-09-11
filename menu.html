@@ -1,54 +1,76 @@
-<nav class="navbar navbar-default">
-    <div class="container-fluid" style="height: 100px">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#"><img src="images/logo.png" alt="logo"></a>
+<div>
+    <md-toolbar class="md-menu-toolbar">
+        <div layout="row" layout-sm="column">
+
+            <div class="navbar-header" style="height: 100px">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="images/logo.png" alt="logo"></a>
+            </div>
+
+            <div>
+                <md-menu-bar>
+                    <md-menu>
+                        <button ng-click="$mdOpenMenu()">
+                            Vendor Invoice
+                        </button>
+                        <md-menu-content>
+                            <md-menu-item>
+                                <md-button ng-click="">
+                                    Upload...
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ng-click="">
+                                    Search...
+                                </md-button>
+                            </md-menu-item>
+                        </md-menu-content>
+                    </md-menu>
+
+                    <md-menu>
+                        <button ng-click="$mdOpenMenu()">
+                            Credit Card Charge
+                        </button>
+                        <md-menu-content>
+                            <md-menu-item>
+                                <md-button ng-href="new-charge.html">
+                                    Add...
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ng-click="window.open('http://www.w3schools.com');">
+                                    Search...
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ng-click="">
+                                    Association...
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ng-click="">
+                                    Upload...
+                                </md-button>
+                            </md-menu-item>
+                        </md-menu-content>
+                    </md-menu>
+
+                    <md-menu>
+                        <button href="javascript:logoutSubmit()">
+                            Logout
+                        </button>
+                        <md-menu-content>
+                        </md-menu-content>
+                    </md-menu>
+                </md-menu-bar>
+
+            </div>
         </div>
-
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-            <ul class="nav navbar-nav">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Vendor Invoice</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="" href="InvoiceUpload.html">Upload</a></li>
-                        <li><a class="" href="invoice-search.html">Search</a></li>
-                    </ul>
-                </li>
-            </ul>
-
-            <ul class="nav navbar-nav">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Credit Card Charge</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="" href="new-charge.html">Charge Add</a></li>
-                        <li><a class="" href="charge-search.html">Charge Search</a></li>
-                        <li><a class="" href="charge-association-upload.html">Charge Association</a></li>
-                        <li><a class="" href="charge-upload.html">Bill Upload</a></li>
-                    </ul>
-                </li>
-            </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-                <li><a class="" href="javascript:logoutSubmit()">Logout</a>
-            </ul>
-
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-</nav>
-
-<script>
-    //    $( "ul>li>a.dropdown-toggle" ).hover(function() {
-    //        $( "li>ul.dropdown-menu" ).slideToggle( "slow" );
-    //    });
-
-    $( "li>ul.dropdown-menu" ).slideToggle( "slow" );
-</script>
+    </md-toolbar>
+</div>
