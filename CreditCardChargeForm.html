@@ -1,0 +1,60 @@
+<div layout="column">
+    <md-content class="md-padding">
+        <form name="userForm">
+            <div layout layout-sm="column">
+                <md-input-container flex="33">
+                    <label>Vendor Name</label>
+                    <input type="text" id="vendor" class="form-control" ng-model="cardCtrl.form.chargeVendor"
+                    ng-keyup="cardCtrl.complete()" ng-blur="cardCtrl.setAutoCompleteValueToModel()">
+                </md-input-container>
+
+                <md-input-container flex="33">
+                    <label>Order Number</label>
+                    <input type="text" id="orderNumber" class="form-control" ng-model="cardCtrl.form.orderNumber">
+                </md-input-container>
+
+                <md-input-container flex="33">
+                    <label>Claim Id/Warranty</label>
+                    <input type="text" id="claimId" class="form-control" ng-model="cardCtrl.form.warrantyId">
+                </md-input-container>
+            </div>
+
+            <div layout layout-sm="column">
+                <md-input-container flex="33">
+                    <label>Amount</label>
+                    <input type="text" id="amount" class="form-control" ng-model="cardCtrl.form.chargeAmount">
+                </md-input-container>
+
+                <md-input-container flex="33">
+                    <label>Description</label>
+                    <input type="text" id="description" class="form-control" ng-model="cardCtrl.form.chargeNote">
+                </md-input-container>
+
+                <md-input-container flex="33">
+                    <label>Charge Type</label>
+                    <md-select ng-model="cardCtrl.form.chargeType">
+                        <md-option value="PARTS">Part</md-option>
+                        <md-option value="LABOR">Labor</md-option>
+                        <md-option value="SHIPPING">Shipping</md-option>
+                        <md-option value="OTHER">Other</md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+
+            <div layout layout-sm="column">
+                <md-input-container flex="33">
+                    <label>Card Type</label>
+                    <md-select ng-model="cardCtrl.form.cardType">
+                        <md-option value="AMEX">AMEX</md-option>
+                        <md-option value="MC">MasterCard</md-option>
+                    </md-select>
+                </md-input-container>
+
+                <md-datepicker flex="33" ng-model="cardCtrl.form.chargeDate"
+                               md-placeholder="Start date"></md-datepicker>
+                <md-datepicker ng-if="cardCtrl.isSearch" flex="33" ng-model="cardCtrl.form.endDate"
+                               md-placeholder="End date"></md-datepicker>
+            </div>
+        </form>
+    </md-content>
+</div>

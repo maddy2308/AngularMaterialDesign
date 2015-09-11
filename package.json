@@ -1,0 +1,26 @@
+{
+  "name": "material_design_angular",
+  "version": "1.0.0",
+  "description": "testing material design with angular",
+  "main": "CreditCardTool.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Angular",
+    "Material",
+    "Design"
+  ],
+  "author": "mmehta",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.4.5",
+    "angular-animate": "^1.4.5",
+    "angular-aria": "^1.4.5",
+    "angular-material": "^0.11.0",
+    "angular-messages": "^1.4.5",
+    "bootstrap": "^3.3.5",
+    "jquery": "^2.1.4",
+    "jquery-ui": "^1.10.5"
+  }
+}
